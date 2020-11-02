@@ -1,30 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## NextJS /w Redux boilerplate
+Hello world! NextJS v10.0 was released a few days before these lines were written, and I figured out its time I'll have a fresh boilerplate ready for my future projects. Feel free to use it aswell!
 
-## Getting Started
+## What this project includes?
+ * This project was generated using create-next-app, and uses:
+- React v17.0.1 /w Redux & Redux-Thunk
+- MVC approach pages
+- Basic folder structure that would fit most projects, at least initially.
+- A nice template of global HOCs
+- ESlint configured using abnb's styleguide with some minor customizations by myself
 
-First, run the development server:
+## Contributing
+Feel free to contribute and add improvments to this project, there's always a nicer & better way of doing things :D
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Notes & Credits
+This boiler is based on Shahaf Antwarg's work, go star his stuff at:
+[a link](https://github.com/shahafan)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Made with :heart: by rzk666
