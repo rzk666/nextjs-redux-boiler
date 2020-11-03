@@ -7,6 +7,5 @@ export const INITIAL_STATE = {
     hasError: false,
     errorCode: -1,
     data: [],
-    test: 'data',
   },
 };

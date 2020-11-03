@@ -1,50 +1,36 @@
 import React from 'react';
-import Head from 'next/head';
 import { connect } from 'react-redux';
 import wrapper from '../redux/store/reduxWrapper';
 // Redux Actions
 import { fetchUsers } from '../redux/models/users/usersActions';
 // HOCs
 import page from '../hocs/page';
-// Styles
-import styles from '../styles/Home.module.scss';
-// Components
-import Card from '../components/common/Card';
-import Clickable from '../components/common/Clickable';
 // Utils
 import NodeService from '../utils/NodeService';
 // Common
-import { HOME, SSR } from '../common/pages';
+import { HOME } from '../common/pages';
+// Components
+import HomeView from '../views/HomeView';
+import HomeController from '../controllers/HomeController';
 
-const Home = () => (
-  <div className={styles.container}>
-    <Head>
-      <title>SSG</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-    <Card />
-    <Clickable
-      routing
-      href={{
-        pathname: `/${SSR}`,
-        query: {},
-      }}
-    >
-      <div className={styles.ssr}>
-        SSR Page
-      </div>
-    </Clickable>
-  </div>
+const Home = (props) => (
+  <HomeController View={HomeView} {...props} />
 );
 
-export const getStaticProps = wrapper.getStaticProps(async ({
+export const getServerSideProps = wrapper.getServerSideProps(async ({
   store, req, res, ...ctx
-}) => ({
-  props: {
-    generatedAt: 'BUILD TIME',
-    serverRendered: NodeService.isServer(),
-  },
-}));
+}) => {
+  const { users } = store.getState();
+  if (!users.data.length) {
+    await store.dispatch(fetchUsers());
+  }
+  return {
+    props: {
+      generatedAt: 'BUILD TIME',
+      serverRendered: NodeService.isServer(),
+    },
+  };
+});
 
 const mapStateToProps = (state) => ({
   users: state.users,

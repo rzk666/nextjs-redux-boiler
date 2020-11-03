@@ -1,5 +1,11 @@
-## NextJS /w Redux boilerplate
+## WORK IN PROGRESS
+
+<!-- ## NextJS /w Redux & thunk boilerplate
 Hello world! NextJS v10.0 was released a few days before these lines were written, and I figured out its time I'll have a fresh boilerplate ready for my future projects. Feel free to use it aswell!
+
+## Run Project
+yarn install
+yarn dev
 
 ## What this project includes?
  * This project was generated using create-next-app, and uses:
@@ -16,4 +22,4 @@ Feel free to contribute and add improvments to this project, there's always a ni
 This boiler is based on Shahaf Antwarg's work, go star his stuff at:
 [a link](https://github.com/shahafan)
 
-Made with :heart: by rzk666
+Made with :heart: by rzk666 -->

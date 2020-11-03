@@ -10,9 +10,9 @@ import {
 } from './usersTypes';
 
 const users = (state = INITIAL_STATE.users, action) => {
+  const { payload } = action;
   switch (action.type) {
     case HYDRATE:
-      const { payload } = action;
       return {
         ...payload.users,
       };
